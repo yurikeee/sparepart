@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="model.Barang" table="masterbarang" catalog="test" optimistic-lock="version">
+      <id name="kodeBarang" type="java.lang.Integer">
+            <column name="KODE BARANG" />
+            <generator class="identity" />
+        </id>
+        <property name="namaBarang" type="string">
+            <column name="NAMA BARANG" length="100" not-null="true" />
+        </property>
+        <property name="hargaJual" type="double">
+            <column name="HARGA JUAL" not-null="true" />
+        </property>
+        <property name="hargaBeli" type="double">
+            <column name="HARGA BELI" not-null="true" />
+        </property>
+        <property name="satuan" type="integer">
+            <column name="SATUAN" not-null="true" />
+        </property>
+        <property name="kategori" type="string">
+            <column name="KATEGORI" length="50" not-null="true" />
+        </property>
+  </class>
+</hibernate-mapping>
